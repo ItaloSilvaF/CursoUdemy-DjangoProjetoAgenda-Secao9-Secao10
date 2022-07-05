@@ -9,7 +9,7 @@ from django.contrib import messages
 
 def index(request):
 
-    contatos = Contato.objects.order_by('id').filter(
+    contatos = Contato.objects.order_by('-id').filter(
         mostrar=True
     )
     paginator = Paginator(contatos, 10)
